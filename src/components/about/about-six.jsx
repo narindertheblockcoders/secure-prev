@@ -2,10 +2,6 @@ import { useEffect } from "react";
 import styles from "./RealEstateSection.module.css"; // We will use CSS Modules for styling
 
 const RealEstateSection = () => {
-
-
-
-  
   useEffect(() => {
     const section = document.querySelector('#real-estate-section');
     const rocket = document.querySelector('.rocket');

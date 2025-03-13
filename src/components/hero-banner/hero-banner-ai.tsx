@@ -10,7 +10,7 @@ const HeroBannerAi = () => {
   const { scrollY } = useScroll();
 
   // Scroll-based movement for images
-  const yLayer01 = useTransform(scrollY, [0, 800], [0, -200]);
+  const yLayer01 = useTransform(scrollY, [0, 800], [0, -500]);
   const yLayer02 = useTransform(scrollY, [0, 800], [-100, -800]);
   const yLayer03 = useTransform(scrollY, [0, 800], [0, -700]);
   const yLayer04 = useTransform(scrollY, [0, 800], [-100, -600]);
@@ -18,18 +18,18 @@ const HeroBannerAi = () => {
   const yLayer07 = useTransform(scrollY, [0, 800], [0, -600]);
 
   // Mouse movement effect
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      const rect = document.getElementById("bannersection").getBoundingClientRect();
-      const x = (e.clientX - rect.left - rect.width / 2) / 10; // Increased movement
-      const y = (e.clientY - rect.top - rect.height / 2) / 10; // Increased movement
-      setMousePosition({ x, y });
-    };
+  // useEffect(() => {
+  //   const handleMouseMove = (e) => {
+  //     const rect = document.getElementById("bannersection").getBoundingClientRect();
+  //     const x = (e.clientX - rect.left - rect.width / 2) / 10; // Increased movement
+  //     const y = (e.clientY - rect.top - rect.height / 2) / 10; // Increased movement
+  //     setMousePosition({ x, y });
+  //   };
 
-    const section = document.getElementById("bannersection");
-    section?.addEventListener('mousemove', handleMouseMove);
-    return () => section?.removeEventListener('mousemove', handleMouseMove);
-  }, []);
+  //   const section = document.getElementById("bannersection");
+  //   section?.addEventListener('mousemove', handleMouseMove);
+  //   return () => section?.removeEventListener('mousemove', handleMouseMove);
+  // }, []);
 
   // Scroll visibility logic
   useEffect(() => {
@@ -56,7 +56,7 @@ const HeroBannerAi = () => {
         transition: 'transform 0.1s ease-out'
       }}
       id="hero">
-      <div className="tp-hero-area main-slider banner-ai"  id="hero-styles" style={{background:'url(/assets/img/home-01/hero/zipi-bg-3-scaled.jpg)'}}>
+      <div className="tp-hero-area main-slider banner-ai"  id="hero-styles" >
         <div className="container p-relative Zindex100">
           <div className="row justify-content-center">
             <div className="banner-data">
@@ -110,22 +110,22 @@ const HeroBannerAi = () => {
         <div className="bann-imgs-wrap"    id="man-section">
           <div className="bann-ai">
             <motion.img
-              src="/assets/img/home-01/hero/pyramid-background-glow.svg"
+              src="/assets/img/home-01/hero/ai-bg.webp"
               className="hero_parallax layer01"
            
               style={{ y: yLayer01 }}
             />
             <motion.img
-              src="spaceship-foreground.svg"
+              src="/assets/img/home-01/hero/left-bg.webp"
               className="hero_parallax layer02"
               style={{ y: yLayer02 }}
             />
             <motion.img
-              src="/assets/img/home-01/hero/astronaut-foreground.svg"
+              src="/assets/img/home-01/hero/right-bg.webp"
               className="hero_parallax layer03"
-              // style={{ y: yLayer03 }}
+              style={{ y: yLayer03 }}
             />
-            {/* <motion.img
+            <motion.img
               src="/assets/img/home-01/hero/middle-rock.webp"
               className="hero_parallax layer04"
               style={{ y: yLayer04 }}
@@ -134,11 +134,11 @@ const HeroBannerAi = () => {
               src="/assets/img/home-01/hero/light.webp"
               className="hero_parallax layer05"
               style={{ y: yLayer05 }}
-            /> */}
+            />
             <motion.img
-              src="/assets/img/home-01/hero/spaceship-foreground.svg"
+              src="/assets/img/home-01/hero/center-top.webp"
               className="hero_parallax layer07"
-              // style={{ y: yLayer07 }}
+              style={{ y: yLayer07 }}
             />
           </div>
         </div>

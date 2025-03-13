@@ -8,7 +8,6 @@ import TeamOne from "@/components/team/team-one";
 import TestimonialOne from "@/components/testimonial/testimonial-one";
 import BlogOne from "@/components/blog/blog-one";
 import FooterFour from "@/layouts/footers/footer-four";
-import RealEstateSection from "@/components/about/about-six";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -20,11 +19,12 @@ import ProjectOne from "@/components/project/project-one";
 import ProjectFour from "@/components/project/project-four";
 import ProjectFive from "@/components/project/project-five";
 import ProjectSix from "@/components/project/project-six";
+import RealEstateSection from "@/components/about/about-six";
+
 // import bannerDiv from "../../../public/assets/img/inner-faq/faq/InnerDiv.png";
 import bannerDiv from "../../public/assets/img/inner-faq/faq/InnerDiv.png";
 import SecureSection from "@/components/whysecure/SecureSection";
 import HeroBannerAi from "@/components/hero-banner/hero-banner-ai";
-
 
 
 
@@ -100,16 +100,18 @@ export default function Home() {
           {/* <AnimationHeader /> */}
           <div id="content-scroll">
             <div id="main">
-              {/* <HeroSection data={data?.featured_section_heading} /> */}
-              <HeroBannerAi />
-              <RealEstateSection />
+             {/* <HeroSection data={data?.featured_section_heading} /> **/ }
+             <HeroBannerAi />
+             <RealEstateSection />
 
-              {/* <BrandOne /> */}
+{/* 
+              <BrandOne /> */}
 
               <div id="main-content">
                 <div id="main-page-content">
                   <div id="itemsWrapperLinks">
                     <div id="itemsWrapper" className="webgl-fitthumbs fx-one relative">
+           
                       {/* <div
                         className="content-row full row_padding_left row_padding_right light-section fadeout-element pt-10"
                         data-bgcolor="#ebebeb"
@@ -126,7 +128,7 @@ export default function Home() {
                                     data-bgcolor="#000"
                                   >
                                     <div
-                                      className="hidden-image"
+                                      class="hidden-image"
                                       style={{
                                         backgroundImage: `url(${item.we_empower_businesses_image})`,
                                         backgroundColor: "rgb(0, 0, 0)",
@@ -146,7 +148,6 @@ export default function Home() {
                       > 
 
                         <div className="one_half">
-   
                         </div>
 
                         <div className="one_half last">
@@ -182,7 +183,7 @@ export default function Home() {
                       {/* <!-- Row --> */}
                       <div
                         className="content-row full text-align-center dark-section d-mb-none"
-                        data-bgcolor="#EBEBEB"
+                        data-bgcolor="#ebebeb"
                       >
                         <div className="projects-list-wrapper invert-header-color">
                           <ul className="projects-list-captions">
@@ -235,7 +236,7 @@ export default function Home() {
                               <span>SEO & Marketing</span>
                             </li>
                           </ul>
-                          
+
                           <ul className="projects-list-images">
                             <li className="trigger-item">
                               <div className="img-mask">
